@@ -1,0 +1,15 @@
+{
+  "number": 14,
+  "name": "HardNegativeTrainer",
+  "short": "Contrastive projection training",
+  "summary": "Train bi-encoder projection heads on frozen pretrained features with explicitly mined hard negatives.",
+  "profile": "deep",
+  "timeout": 600,
+  "scope": "Train shared 32-dimensional bi-encoder projection heads on frozen pretrained MiniLM features. Transformer backbone is not fine-tuned. Tiny authored fixture, four evaluation topics.",
+  "skills": [
+    "Python",
+    "Machine Learning",
+    "Data Processing",
+    "Software Testing"
+  ]
+}

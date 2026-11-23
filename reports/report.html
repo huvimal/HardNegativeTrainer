@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HardNegativeTrainer</title><style>body{font:16px system-ui;background:#0c1524;color:#ecf4ff;max-width:1100px;margin:40px auto;padding:24px}h1{font-size:40px}p{line-height:1.6;color:#bfd0df}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#14283b;border-radius:16px;padding:24px}strong{color:#58e0b8}</style><h1>HardNegativeTrainer</h1><p><strong>Measured local experiment</strong> · 2026-11-21T04:30:26Z</p><p>Train shared 32-dimensional bi-encoder projection heads on frozen pretrained MiniLM features. Transformer backbone is not fine-tuned. Tiny authored fixture, four evaluation topics.</p><pre>{
+  &quot;pretrained_test_hit1&quot;: 1.0,
+  &quot;projection_test_hit1&quot;: 0.25,
+  &quot;train_hit1&quot;: 1.0,
+  &quot;hard_negative_pairs&quot;: [
+    {
+      &quot;query&quot;: 0,
+      &quot;hard_negative&quot;: 3
+    },
+    {
+      &quot;query&quot;: 1,
+      &quot;hard_negative&quot;: 7
+    },
+    {
+      &quot;query&quot;: 2,
+      &quot;hard_negative&quot;: 5
+    },
+    {
+      &quot;query&quot;: 3,
+      &quot;hard_negative&quot;: 0
+    },
+    {
+      &quot;query&quot;: 4,
+      &quot;hard_negative&quot;: 7
+    },
+    {
+      &quot;query&quot;: 5,
+      &quot;hard_negative&quot;: 3
+    },
+    {
+      &quot;query&quot;: 6,
+      &quot;hard_negative&quot;: 3
+    },
+    {
+      &quot;query&quot;: 7,
+      &quot;hard_negative&quot;: 3
+    }
+  ],
+  &quot;checks&quot;: [
+    &quot;Training query IDs do not include evaluation IDs&quot;,
+    &quot;Actual contrastive objective optimized&quot;
+  ],
+  &quot;scope&quot;: &quot;Train shared 32-dimensional bi-encoder projection heads on frozen pretrained MiniLM features. Transformer backbone is not fine-tuned. Tiny authored fixture, four evaluation topics.&quot;
+}</pre><p>Authored small fixtures unless explicitly stated otherwise. Inspect errors, assumptions and limitations before sharing. No automatic external actions.</p></html>

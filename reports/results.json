@@ -1,0 +1,77 @@
+{
+  "project": "HardNegativeTrainer",
+  "number": 14,
+  "status": "local_run_passed",
+  "timestamp_utc": "2026-11-21T04:30:26Z",
+  "duration_seconds": 5.700222969055176,
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "Pillow": "13.0.0",
+    "torch": "2.10.0+cpu",
+    "transformers": "4.57.6",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.32.0",
+    "mcp": "2.3.0"
+  },
+  "source_sha256": {
+    "common.py": "6824312bac56d81a071760617f624272948f76fcae8190f8168a8911c8f7e8b0",
+    "experiment.py": "612c4961c23d4d47b07e513ab09861145a304fdf4ad5e0b9a427d59da01bb954",
+    "run.py": "f59c8f7399ab614d89f8a565b96f60875e75284d439fe5a38bd6837c730dfdbf"
+  },
+  "result": {
+    "pretrained_test_hit1": 1.0,
+    "projection_test_hit1": 0.25,
+    "train_hit1": 1.0,
+    "hard_negative_pairs": [
+      {
+        "query": 0,
+        "hard_negative": 3
+      },
+      {
+        "query": 1,
+        "hard_negative": 7
+      },
+      {
+        "query": 2,
+        "hard_negative": 5
+      },
+      {
+        "query": 3,
+        "hard_negative": 0
+      },
+      {
+        "query": 4,
+        "hard_negative": 7
+      },
+      {
+        "query": 5,
+        "hard_negative": 3
+      },
+      {
+        "query": 6,
+        "hard_negative": 3
+      },
+      {
+        "query": 7,
+        "hard_negative": 3
+      }
+    ],
+    "checks": [
+      "Training query IDs do not include evaluation IDs",
+      "Actual contrastive objective optimized"
+    ],
+    "scope": "Train shared 32-dimensional bi-encoder projection heads on frozen pretrained MiniLM features. Transformer backbone is not fine-tuned. Tiny authored fixture, four evaluation topics."
+  },
+  "models_used": [
+    {
+      "kind": "encoder",
+      "config_sha256": "fc00f0ca1c3380f17937a4050908dd2cf743c36bebe437cf448b8aa4e7ddfe4d",
+      "upstream_model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
+      "revision": "4ca70771034acceecb2e72475f72050fcdde4ddc",
+      "weights_sha256": "cf1e4e2d420c664973037c3c73125d7a8fc69952495093ef8f50596f8943a433"
+    }
+  ],
+  "publication_note": "Local fixture checks passed, not independent validation or user approval. Review this run before publishing."
+}
